@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.todo-item{
+    border: 2px solid;
+    border-radius: 8px;
+    margin: 10px 2px;
+    padding: 10px;
+}
+
+button{
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 4px 20px;
+    margin-top: 6px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.25s;
+}

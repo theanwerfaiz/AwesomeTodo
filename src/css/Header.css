@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  --primary-color: rgb(31 36 36);
+  --primary-color-dark: rgb(197 250 250);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links a:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.footer-box {
+  position: relative;
+  width: 100%;
+}
+.footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    width: 100%;
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-links a {
+    padding: 1.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .brand-title {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    padding: 0;
+  }
+  nav .navbar-links {
+    display: none;
+  }
+}
